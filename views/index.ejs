@@ -6,6 +6,14 @@
     <title>Landing Page</title>
 </head>
 <body>
-  
+  <ul>
+      <li>
+          <% if (user) { %>
+              <a href="/logout"> Log out</a>
+           <% } else { %>
+                <a href="/auth/google">Login with Google</a>
+            <% } %>
+      </li>
+  </ul>
 </body>
 </html>

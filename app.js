@@ -6,7 +6,7 @@ const passport = require('passport');
 const port = 3000;
 //below we load up the routes
 const indexRouter = require('./routes/index');
-const searchRouter = require('./routes/search');
+const investorRouter = require('./routes/investor');
 // this is the required variable
 require('dotenv').config()
 
@@ -35,7 +35,8 @@ app.use(passport.session());
 
 //below we set our routes
 app.use('/', indexRouter)
-// app.use('/', )
+app.use('/', investorRouter)
+
 
 app.listen(port, () => {
     console.log(`Express is on this port:${port}`);

@@ -6,7 +6,8 @@ const passport = require('passport');
 const port = 3000;
 //below we load up the routes
 const indexRouter = require('./routes/index');
-const investorRouter = require('./routes/investor');
+const investorRouter = require('./routes/investors');
+const stockRouter = require('./routes/stocks');
 // this is the required variable
 require('dotenv').config()
 
@@ -35,7 +36,8 @@ app.use(passport.session());
 
 //below we set our routes
 app.use('/', indexRouter)
-app.use('/', investorRouter)
+app.use('/investors', investorRouter)
+app.use('/stocks', stockRouter)
 
 
 app.listen(port, () => {

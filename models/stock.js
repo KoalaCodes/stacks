@@ -6,7 +6,8 @@ const Schema = mongoose.Schema
 const scompSchema = new Schema ({
     name: {
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
     symbol: {
         type: String,
@@ -17,7 +18,7 @@ const scompSchema = new Schema ({
     low: String,
     close: String,
     volume: String,
-    unique: true
+    
 })
 
 module.exports = mongoose.model('Stock', scompSchema);

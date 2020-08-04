@@ -2,15 +2,12 @@ const mongoose = require('mongoose');// this line is utilize the mongoose packag
 
 const Schema = mongoose.Schema;
 
-const stockListSchema = new Schema ({
-    stock: [{type: Schema.Types.ObjectId, ref: 'Stock'}],
-    type: Date,
-})
+
 
 const investorSchema = new Schema({
     name: String,
     email: String,
-    portfolio: [stockListSchema],
+    portfolio: [{type: Schema.Types.ObjectId, ref: 'Stock'}],
     googleId: String
 })
 

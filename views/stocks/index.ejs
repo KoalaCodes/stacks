@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All My Stocks</title>
+</head>
+<body>
+    <h1>STOCKS</h1>
+    <div class="card">
+        <div class="container">
+            <table id ="list">
+                <tbody>
+                    <tr>
+                <% stocks.forEach(function (stock, idx) { %>
+                <th><%= stock.name %></th>
+                <th><%= stock.symbol %></th>
+                <th><%= stock.open %></th>
+                <th><%= stock.high %></th>
+                <th><%= stock.low %></th>
+                <th><%= stock.close %></th>
+                <th><%= stock.volume %></th>
+               <% }) %>
+                </tbody>
+           </table>
+        </div>
+    </div>
+</body>
+</html>

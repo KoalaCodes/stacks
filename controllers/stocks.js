@@ -4,7 +4,7 @@ module.exports = {
     index,
     new: newStock,
    create, 
-   deleteOne
+   delete: deleteStock
 }
 
 function index(req, res) {
@@ -24,10 +24,12 @@ function create(req, res) {
     })
 }
 
-function deleteOne(req, res) {
-   Stock.deleteOne(stock._id, function(err, stock){
+function deleteStock(req, res) {
+    console.log(req.params)
+   Stock.findByIdAndDelete(req.params.id, function(err, stock){
        if (err) console.log(err)
        res.redirect('/stocks')
    }) 
     
 }
+

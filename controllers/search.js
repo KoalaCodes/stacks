@@ -1,7 +1,7 @@
 
 const request = require('request');
 const rootURL = "https://www.alphavantage.co/";
-const Investor = require('../models/investor');
+// const Investor = require('../models/investor');
 
 module.exports = {
   search

@@ -4,7 +4,7 @@ const stocksCtrl = require('../controllers/stocks');
 router.get('/', stocksCtrl.index);
 router.get('/new', stocksCtrl.new);
 router.post('/', stocksCtrl.create);
-router.delete('/index/:id'. stocksCtrl.delete)
+router.delete('/:id', stocksCtrl.delete);
 
 
 

@@ -20,6 +20,9 @@
                 <th><%= stock.low %></th>
                 <th><%= stock.close %></th>
                 <th><%= stock.volume %></th>
+                <form class="delete-form" action="/stocks/<%= idx %>?_method=DELETE" method="POST">
+                    <buttom type="submit"></buttom>
+                </form>
                <% }) %>
                 </tbody>
            </table>

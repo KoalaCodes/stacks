@@ -3,6 +3,7 @@ const express = require('express'); //this line uses the require method to impla
 const morgan = require('morgan');
 const session = require('express-session');
 const passport = require('passport');
+const methodOverride = require('method-override');
 const port = 3000;
 //below we load up the routes
 const indexRouter = require('./routes/index');
@@ -18,12 +19,13 @@ require('./config/database');
 require('./config/passport');
 // set our view engine
 app.set('view engine', 'ejs');
-
+app.use(methodOverride('_method'));
 app.use(express.static('public'));
 app.use(morgan('dev'));
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 //add session middleware
+
 app.use(session({
     secret: "STACKS" ,
     resave: false,

@@ -4,7 +4,9 @@ module.exports = {
     index,
     new: newStock,
    create, 
-   delete: deleteStock
+   delete: deleteStock,
+  update,
+  edit
 }
 
 function index(req, res) {
@@ -28,8 +30,19 @@ function deleteStock(req, res) {
     console.log(req.params)
    Stock.findByIdAndDelete(req.params.id, function(err, stock){
        if (err) console.log(err)
-       res.redirect('/stocks')
+       res.redirect('/stocks/new')
    }) 
     
 }
 
+function update(req, res) {
+    Stock.findByIdAndUpdate(req.params.id, req.body, {new: true}, function(err, stocks){
+        res.redirect('/stocks') //req.body
+    })
+}
+
+function edit(req, res) {
+    Stock.findById(req.params.id, function(err, stock){
+        res.render('investors/edit', {stock})
+    })
+}

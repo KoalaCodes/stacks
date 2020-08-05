@@ -9,7 +9,7 @@ module.exports = {
 function show(req, res) {
     Investor.findById(req.user._id, function(err, investor){
         Stock.find({investor: investor._id}, function(err, stocks){
-            res.render('investors/show', { investor, stocks });
+            res.render('investors/index', { investor, stocks });
         })
     });
 }

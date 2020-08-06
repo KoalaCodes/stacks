@@ -1,0 +1,81 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+   
+}
+
+.button {
+    font:  11px Arial;
+    text-decoration: none;
+    background-color: #80af73;
+    color: whitesmoke;
+    padding:  14px 40px;
+    border-radius: 5px;
+    background-size: height 200px
+  }
+
+  .main {
+    margin-left: 90px;
+    margin-top: 80px;
+}
+
+
+
+.slogo {
+    position: relative;
+    padding-top: 5px;
+    height: 100px;
+    margin-right: auto;
+}
+
+.card {
+    display: grid;
+    grid-template-columns: 100px 500px;
+    grid-template-rows: 210px 210px 210px 210px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    background-color: white;
+    transition: 0.3s;
+    max-width: 1000px;
+    max-height: 800px;
+    border-radius: 8px;
+    margin-top: 50px;
+    margin-left: 25px;
+    z-index: 3;
+    position: relative;
+ }
+
+.container {
+    max-height: 800px;
+    max-width: 500px;
+    
+}
+
+
+footer{
+    
+    height: 100px;
+    background-color: #80af73;
+    width: 100%;
+    z-index: 1;
+    bottom: 0;
+    position: absolute;
+   
+}
+
+.button-i {
+    font:  11px Arial;
+    text-decoration: none;
+    background-color: #80af73;
+    color: whitesmoke;
+    padding:  14px 40px;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-right: 5px;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }

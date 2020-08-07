@@ -6,9 +6,9 @@ Stacks is an application that serves the purpose of adding stocks to a watchlist
 - [Getting Started](#getting-started)
     *   [Prerequisites](#prerequisites)
     *   [installation](#isntallation)
-- Usage
-- Long-term Goals
-- Acknowledgements
+- [Usage](#usage)
+- [Long-term Goals](#long-term-goals)
+- [Acknowledgements](#acknowledgments)
 
 ## About The Project
 The project's intent is to be a portfolio investing application complemented with a social community built around it. I chose this project because I have an interest in building wealth via the stock market. I felt many others can share the sentiment.
@@ -65,9 +65,32 @@ npm i passport
 - Acquire your api here
 [Alphavantage](https://www.alphavantage.co/support/#api-key)
 
+## Usage
+The use case for this app would allow amateur and professional investors to socialize over strategies and valuing stocks.
+![example](https://imgur.com/Xygwe0h.jpeg)
 ## Contact
+[instagram](https://www.instagram.com/pixo_painter/) <br>
+[linkedin](https://www.linkedin.com/in/manuel-fuentes-45851a195/)
 
-
+## Long-Term Goals
+- For future development, the focus would shift to implementing a search feature to look at a stock then adding the data. 
+- Then develop the social element to the app: follow, trending, and friendlist. 
+- clean up the UI.
 ## Acknowledgements
+I want to say thank you to all the developers that helped debug the app and all the resources that made this possible.<br>
+[arascry](https://github.com/arascry) <br>
+[tchan247](https://github.com/tchan247)<br>
+[melissay94](https://github.com/melissay94)<br>
+General Assembly Staff<br>
+[mongodb](https://cloud.mongodb.com)<br>
+[mongoose](https://mongoosejs.com/)<br>
+[nodejs](https://nodejs.org/en/)<br>
+[express](https://expressjs.com/)<br>
+[w3schools](https://www.w3schools.com/)<br>
+[imgur](https://imgur.com/)<br>
+[trello](https://trello.com)<br>
+[postman](https://www.postman.com/)<br>
+[heroku](https://signup.heroku.com)
 
-[arascry](https://github.com/arascry)
+## Deploy
+[Stacks](https://stacks-1-app.herokuapp.com/)

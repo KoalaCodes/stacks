@@ -4,7 +4,7 @@
   "description": "Stacks is an application that serves the purpose of adding stocks to a watchlist. \r ## Table of Contents\r - [About the Project](#about-the-project)\r     * [Built With](#built-with)\r - [Getting Started](#getting-started)\r     *   [Prerequisites](#prerequisites)\r     *   [installation](#isntallation)\r - Usage\r - Long-term Goals\r - Acknowledgements",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js",
+    "start": "node ./app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

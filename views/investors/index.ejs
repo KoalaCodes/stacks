@@ -12,7 +12,28 @@
         <div class="card">
         <img src="images\ideas-01.png" alt="logo" class="slogo">
             <div class="container">
-            <h2><%= investor.name %></h2>
+                <h2><%= investor.name %></h2>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>stocks</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <% for(let i = 0; i < investor.portfolio.length; i++) { %>
+                            <tr>
+                                <td><%= investor.portfolio[i].name %></td>
+                               
+                                <td><a href="/stocks" class="button-s">Details</a></td>
+                             </tr>
+                       <% } %>
+                       
+                    </tbody>
+                    
+                </table>
+            
+            
             </div>
         </div>
         <footer>

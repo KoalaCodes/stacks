@@ -7,31 +7,56 @@
     <title>All My Stocks</title>
 </head>
 <body>
-    <h1>STOCKS</h1>
+    <a href="/logout" class="button-i"> LOG OUT</a>
+    
     <div class="card">
+        <img src="images\ideas-01.png" alt="logo" class="slogo">
         <div class="container">
-            <table id ="list">
+            <h1 class="indexh1">Portfolio</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Company</th>
+                        <th>Symbol</th>
+                        <th>Open</th>
+                        <th>High</th>
+                        <th>Low</th>
+                        <th>Close</th>
+                        <th>Volume</th>                       
+                    </tr>
+                </thead>
                 <tbody>
                     <tr>
-                <% stocks.forEach(function (stock, idx) { %>
-                <th><%= stock.name %></th>
-                <th><%= stock.symbol %></th>
-                <th><%= stock.open %></th>
-                <th><%= stock.high %></th>
-                <th><%= stock.low %></th>
-                <th><%= stock.close %></th>
-                <th><%= stock.volume %></th>
-                <th> 
-                    <form class="delete-form" action="/stocks/<%= stock._id %>?_method=DELETE" method="POST">
-                        <button type="submit">Delete</button>
+                        <% stocks.forEach(function (stock, idx) { %>
                         
-                    </form>
-                    <a href="/stocks/investors/<%= stock._id %>/edit"> edit this stock</a>
-                </th>
-               <% }) %>
+                        <td><%= stock.name %></td>
+                        <td><%= stock.symbol %></td>
+                        <td><%= stock.open %></td>
+                        <td><%= stock.high %></td>
+                        <td><%= stock.low %></td>
+                        <td><%= stock.close %></td>
+                        <td><%= stock.volume %></td>
+                        <td> 
+                            <form class="delete-form" action="/stocks/<%= stock._id %>?_method=DELETE" method="POST">
+                                <button class="delete"type="submit">Delete</button>
+                                
+                            </form>
+                            
+                            </td>
+                            <td>
+                                <a href="/stocks/investors/<%= stock._id %>/edit" class="button-s"> EDIT</a>
+                            </td>
+                    </tr>
+                        <% }) %>
                 </tbody>
-           </table>
+            </table>
+            <a href="/investors" class="button-d">Dashboard</a>
+            <a href="stocks/new" class="button-d">ADD STOCK</a>
         </div>
     </div>
+   
+    <footer>
+
+    </footer>
 </body>
 </html>

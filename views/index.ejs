@@ -4,19 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <img src="\images\mainlogo.png" alt="stacks" class="main">
+    <img src="\images\main-logo-01.png" alt="stacks" class="main">
     <title>Landing Page</title>
 </head>
 <body>
-  
-  <ul>
-      <li>
+    
+  <ul >
+      <li >
           <% if (user) { %>
-              <a href="/logout" class="button"> LOG OUT</a>
+              <a href="/logout" class="button" class="main-index"> LOG OUT</a>
            <% } else { %>
-                <a href="/auth/google" class="button">LOGIN</a>
+                <a href="/auth/google" class="button" class="main-index">LOGIN</a>
             <% } %>
       </li>
+    
   </ul>
 </body>
 </html>

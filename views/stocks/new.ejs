@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
     <title>ADD A STOCK</title>
 </head>
 <body>
+    <a href="/logout" class="button-i"> LOG OUT</a>
     <div class="card">
+    <img src="\images\ideas-01.png" alt="logo" class="slogo">
         <div class="container">
-            <form action="/stocks" method="POST">
+            <h2>ADD</h2>
+            <form action="/stocks" method="POST" class="add-form">
                 <label>Name:
                     <input type="text" name="name">
                 </label>
@@ -32,9 +35,12 @@
                     <input type="text" name="volume">
                 </label>
 
-                <button type="submit" value="ADD STOCK">ADD STOCK</button>
+                <button type="submit" value="ADD STOCK" class="Add">ADD STOCK</button>
             </form>
         </div>
     </div>
+    <footer>
+
+    </footer>
 </body>
 </html>

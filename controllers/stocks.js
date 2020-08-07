@@ -1,3 +1,4 @@
+const Investor = require('../models/investor')
 const Stock = require('../models/stock');
 
 module.exports = {
@@ -20,17 +21,25 @@ function newStock(req, res) {
 }
 
 function create(req, res) {
-    Stock.create(req.body, function(err, stock){
-        if(err) console.log(err)
-        res.redirect('/stocks')
+    Investor.findById(req.user._id, function(err, investor){
+        Stock.create(req.body, function(err, stock){
+            if(err) console.log(err)
+            investor.portfolio.push(stock) 
+            investor.save( function(err){
+                res.redirect('/stocks')
+            })
+           
+           
+        })
     })
+    
 }
 
 function deleteStock(req, res) {
     console.log(req.params)
    Stock.findByIdAndDelete(req.params.id, function(err, stock){
        if (err) console.log(err)
-       res.redirect('/stocks/new')
+       res.redirect('/stocks')
    }) 
     
 }

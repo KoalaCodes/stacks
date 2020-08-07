@@ -3,37 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
     <title>Edit</title>
 </head>
 <body>
+    <a href="/logout" class="button-i"> LOG OUT</a>
     
-
-    
-    <form action="/stocks/investors/<%= stock._id %>?_method=PUT" method="POST">
-        <label>Name
-            <input type="text" name="name" value="<%= stock.name%>">
-        </label>
-        <label>Symbol
-            <input type="text" name="symbol" value="<%= stock.symbol%>">
-        </label>
-        <label>Open
-            <input type="text" name="open" value="<%= stock.open%>">
-        </label>
-        <label>High
-            <input type="text" name="high" value="<%= stock.high%>">
-        </label>
-        <label>Low
-            <input type="text" name="low" value="<%= stock.low%>">
-        </label>
-        <label>Close
-            <input type="text" name="close" value="<%= stock.close%>">
-        </label>
-        <label>Volume
-            <input type="text" name="volume" value="<%= stock.volume%>">
-        </label>
+    <div class="card-edit">
+     
         
-        <button type="submit" value="EDIT STOCK">EDIT STOCK</button>
-    </form>
+        <div class="container-edit">
+            
+        
+            <img src="\images\ideas-01.png"  alt="logo" class="slogo">
+       
+        <form action="/stocks/investors/<%= stock._id %>?_method=PUT" method="POST" id="edit">
+            <label>Name
+                <input type="text" name="name" value="<%= stock.name%>">
+            </label>
+            <label>Symbol
+                <input type="text" name="symbol" value="<%= stock.symbol%>">
+            </label>
+            <label>Open
+                <input type="text" name="open" value="<%= stock.open%>">
+            </label>
+            <label>High
+                <input type="text" name="high" value="<%= stock.high%>">
+            </label>
+            <label>Low
+                <input type="text" name="low" value="<%= stock.low%>">
+            </label>
+            <label>Close
+                <input type="text" name="close" value="<%= stock.close%>">
+            </label>
+            <label>Volume
+                <input type="text" name="volume" value="<%= stock.volume%>">
+            </label>
+            
+            <button type="submit" value="EDIT STOCK" class="edit-button">EDIT STOCK</button>
+        </form>
+        </div>
+    </div>
+    <footer>
+        
+    </footer>
 </body>
 </html>

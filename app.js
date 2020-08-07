@@ -4,7 +4,7 @@ const morgan = require('morgan');
 const session = require('express-session');
 const passport = require('passport');
 const methodOverride = require('method-override');
-const port = 3000;
+const port = process.env.PORT || 3000;
 //below we load up the routes
 const indexRouter = require('./routes/index');
 const investorRouter = require('./routes/investors');
